@@ -1,5 +1,6 @@
 import Banner from "../components/Banner";
-import { HStack, Image, Box, Text, Flex } from "@chakra-ui/react"
+import { TravelType } from "../components/TravelType";
+import { HStack, Image, Box, Text, Flex, Divider} from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -10,31 +11,25 @@ export default function Home() {
         mx="auto" 
         justifyContent="space-around" 
         mt="7.125rem" 
-        fontSize="24px" 
-        fontWeight="600" 
-        color="gray.300"
       >
-        <Box>
-          <Image src="/images/cocktail.svg" mb="24px" mx="auto"/>
-          <Text>vida noturna</Text>
-        </Box>
-        <Box>
-          <Image src="/images/surf.svg" mb="24px" mx="auto"/>
-          <Text>praia</Text>
-        </Box>
-        <Box>
-          <Image src="/images/building.svg" mb="24px" mx="auto"/>
-          <Text>moderno</Text>
-        </Box>
-        <Box justifyContent="center">
-          <Image src="/images/museum.svg" mb="24px" mx="auto"/>
-          <Text>clássico</Text>
-        </Box>
-        <Box>
-          <Image src="/images/earth.svg" mb="24px" mx="auto"/>
-          <Text>e mais...</Text>
-        </Box>
+        <TravelType src="/images/cocktail.svg">
+          Vida noturna
+        </TravelType>
+        <TravelType src="/images/surf.svg">
+          Praia
+        </TravelType>
+        <TravelType src="/images/building.svg">
+          Moderno
+        </TravelType>
+        <TravelType src="/images/museum.svg">
+          Clássico
+        </TravelType>
+        <TravelType src="/images/earth.svg">
+          e mais...
+        </TravelType>
       </Flex>
+
+      <Divider orientation="horizontal" mt="5rem" w="5.6rem" mx="auto" borderBottom="2px" borderColor="gray.300"/>
     </>
   )
 }
